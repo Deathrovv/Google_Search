@@ -15,10 +15,35 @@
 }
 
 :root {
+  /* Logo colors  */
   --g-blue: #4285f4;
   --g-red: #ea4335;
   --g-yellow: #fbbc05;
   --g-green: #34a853;
+
+  /* --lt-primary: black;
+  --lt-text: white;
+  --lt-footAndBtns: black;
+  --lt-borders: grey;
+  --lt-links: rgb(105, 83, 231);
+  --lt-footer: rgb(32, 32, 32); */
+
+  /* Dark theme colors */
+  --dt-primary: black;
+  --dt-text: white;
+  --dt-footAndBtns: black;
+  --dt-borders: grey;
+  --dt-links: rgb(105, 83, 231);
+  --dt-footer: rgb(32, 32, 32);
+}
+/* You need to standartize the colors on the page so that you can switch them with the toggle */
+[data-theme="dark"] {
+  --lt-primary: black;
+  --lt-text: white;
+  --lt-footAndBtns: black;
+  --lt-borders: grey;
+  --lt-links: rgb(105, 83, 231);
+  --lt-footer: rgb(32, 32, 32);
 }
 
 body {
@@ -197,6 +222,10 @@ form {
   box-shadow: -1px -1px 0 1px rgba(207, 205, 205, 0.2),
     2px 2px 3px 1px rgba(109, 107, 107, 0.19);
 }
+.search_bar:focus-within {
+  box-shadow: -1px -1px 0 1px rgba(207, 205, 205, 0.2),
+    2px 2px 3px 1px rgba(109, 107, 107, 0.19);
+}
 
 #search_input {
   border: none;
@@ -211,14 +240,14 @@ form {
   display: flex;
 }
 
-.lupa {
+#lupa {
   padding: 2px 10px 0 15px;
   min-height: 20px;
   min-width: 20px;
-  fill: #a9a9a9;
+  fill: #918f8f;
 }
 
-.mic {
+#mic {
   padding-right: 15px;
   cursor: pointer;
   min-height: 24px;
@@ -228,7 +257,7 @@ form {
   height: 70px;
   padding: 18px 0 0;
 }
-.search_btns > button:hover {
+.btn:hover {
   box-shadow: 0 0 1px 1px rgba(78, 78, 78, 0.2),
     1px 1px 0 0 rgba(102, 101, 101, 0.19);
 }
@@ -303,11 +332,11 @@ h5 {
 
 .black_line {
   height: 5px;
-  border: 3px solid black;
+  border: 3px solid var(--dt-primary);
 }
 .white_line {
   height: 5px;
-  border: 3px solid rgb(240, 20, 20);
+  border: 3px solid white;
 }
 
 .region {
@@ -318,7 +347,7 @@ h5 {
   background-color: rgba(161, 161, 161, 0.171);
 }
 
-.esp {
+.region > h5 {
   font-size: 15px;
   color: #0000008a;
   font-weight: 100;
@@ -354,6 +383,7 @@ h5 {
   color: rgb(226, 221, 221);
 }
 
+/* Automatic dark mode  */
 @media (prefers-color-scheme: dark) {
   body {
     color: #eee;
@@ -361,10 +391,57 @@ h5 {
   }
 
   .navbar > a {
-    color: #e2e2e4;
+    color: var(--dt-text);
   }
 
-  button {
-    color: #1c1c1d;
+  .dot {
+    background-color: var(--dt-text);
+  }
+
+  /* .search_bar {
+    border: 1px solid white;
+  } */
+
+  #search_input {
+    background-color: var(--dt-primary);
+    color: var(--dt-text);
+  }
+
+  #lupa {
+    fill: var(--dt-text);
+  }
+  .search_bar:hover {
+    /* border: 1px solid var(--dt-borders); */
+    box-shadow: -1px -1px 0 1px var(--dt-borders),
+      1px 3px 4px 1px var(--dt-borders);
+    /* box-shadow: -1px -1px 0 3px rgba(243, 240, 240, 0.2),
+      2px 2px 3px 3px rgba(245, 240, 240, 0.19); */
+  }
+
+  .btn {
+    background-color: var(--dt-primary);
+    color: var(--dt-text);
+  }
+  .btn:hover {
+    border: 1px solid var(--dt-borders);
+  }
+  .lang_options > h5 {
+    color: var(--dt-text);
+  }
+  .lang_options > a {
+    color: var(--dt-links);
+  }
+  .region {
+    border-bottom: 1px solid var(--dt-borders);
+  }
+  .region > h5 {
+    color: var(--dt-text);
+  }
+  .footer,
+  .region {
+    background-color: var(--dt-footer);
+  }
+  .footer > a {
+    color: var(--dt-text);
   }
 }

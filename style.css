@@ -110,6 +110,7 @@ body {
   font-weight: 300;
   color: var(--grey-text-2);
   background-color: var(--background);
+  transition: 0.3s ease;
 }
 
 .page_container {
@@ -264,6 +265,7 @@ form {
   border: 1px solid var(--search-bar-border);
   border-radius: 24px;
   max-width: 584px;
+  transition: 0.3s ease;
 }
 
 .search_bar:hover {
@@ -284,6 +286,7 @@ form {
   font-weight: 100;
   background-color: var(--primary-help);
   color: var(--text);
+  transition: 0.3s ease;
 }
 
 .search_bar > span {
@@ -324,6 +327,7 @@ form {
   min-width: 54px;
   text-align: center;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .lang_options {

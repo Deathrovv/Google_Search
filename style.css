@@ -22,35 +22,6 @@
   --g-green: #34a853;
 }
 
-/* Automatic dark mode  */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary: #333335;
-    --primary-help: rgb(41, 40, 40);
-    --text: #faf5f5de;
-    --grey-text: #ebf0f5;
-    --grey-text2: rgb(241, 235, 235);
-    --dot-color: #a39f9f;
-    --user-shadow: rgba(103, 105, 103, 0.664);
-    --search-bar-border: #dfe1e5;
-    --search-bar-shadow1: rgba(207, 205, 205, 0.925);
-    --search-bar-shadow2: rgba(212, 208, 208, 0.918);
-    --search-bar-focus1: rgba(207, 205, 205, 0.877);
-    --search-bar-focus2: rgba(211, 203, 203, 0.829);
-    --lupa: #e9e0e0;
-    --btn-hover1: rgba(240, 231, 231, 0.842);
-    --btn-hover2: rgba(240, 230, 230, 0.863);
-    --btn-color: #e7ebee;
-    --footAndBtns: rgb(243, 234, 234);
-    --borders: rgb(151, 142, 142);
-    --links: rgb(149, 133, 238);
-    --footer: rgb(230, 220, 220);
-    --footer-border: #959599;
-    --footer-color: rgba(170, 163, 163, 0.171);
-    --background: rgb(26, 25, 25);
-  }
-}
-
 [data-theme="light"] {
   /* Light theme colors */
   --primary: #f8f9fa;
@@ -79,6 +50,7 @@
 }
 
 [data-theme="dark"] {
+  /* dark theme colors */
   --primary: #333335;
   --primary-help: rgb(41, 40, 40);
   --text: #faf5f5de;
@@ -99,8 +71,8 @@
   --borders: rgb(151, 142, 142);
   --links: rgb(149, 133, 238);
   --footer: rgb(230, 220, 220);
-  --footer-border: #959599;
-  --footer-color: rgba(170, 163, 163, 0.171);
+  --footer-border: #343436;
+  --footer-color: rgba(75, 75, 75, 0.171);
   --background: rgb(26, 25, 25);
 }
 
